@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="rules">
+                <p style="text-decoration: underline; text-align: center;">Features:</p>
+                <p>Enter key to check guess or Click Check</p>
+                <p>Validates for characters that are not numbers</p>
+                <p>Validates for numbers that don't qualify</p>
+                <p>Or just do things the old boring way with prompts</p>
+
+
+
+            </div>
+            <div class="buttonWrapper">
+                <input type="text" name="userInput" id="userInput" class="userInput" placeholder="Enter a number">
+                <button id="button">Check</button>
+                <button id="rest">Reset</button>
+                <button id="prompt">Prompt</button>
+
+            </div>
+            <div class="hints" id="hints">
+                
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
