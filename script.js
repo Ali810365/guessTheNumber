@@ -64,7 +64,7 @@ prompts.addEventListener("click", function () {
         } else {
             alert("A bit higher");
         }
-        guess = prompt("guess a number between 1 and 100 " + num);
+        guess = prompt("guess a number between 1 and 100 ");
     }
     while (guess != num) {
 
