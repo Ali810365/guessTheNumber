@@ -7,6 +7,7 @@ let targetNumber = Math.ceil(Math.random() * 100);
 let classList = document.getElementsByClassName("userInput");
 let prompts = document.getElementById("prompt");
 let guest;
+let counter = 0;
 //classList[0].placeholder = targetNumber;
 let num;
 
@@ -30,10 +31,18 @@ function program() {
             hints.innerHTML = "Please enter a number between 1 and 100";
         } else if (num > targetNumber) {
             hints.innerHTML = goLower[Math.floor(Math.random() * goLower.length)];
+            counter++;
         } else if (num < targetNumber) {
             hints.innerHTML = "Try a higher number ";
+            counter++;
         } else {
-            hints.innerHTML = `You guessed it correctly! The lucky number is ${num}`;
+            counter++
+            if(counter == 1){
+                hints.innerHTML = `You guessed it correctly! It only took you ${counter} try`
+            }
+            else{
+                hints.innerHTML = `You guessed it correctly! It only took you ${counter} tries`
+            }
         }
         
     })
@@ -53,6 +62,7 @@ function backToDefault() {
 prompts.addEventListener("click", function () {
     let num = Math.ceil(Math.random() * 100)
     let guess = prompt("guess a number between 1 and 100");
+    
 
     do {
         if (isNaN(guess)) {
@@ -61,6 +71,7 @@ prompts.addEventListener("click", function () {
             alert("Please enter a number between 1 and 100");
         } else if (guess > num) {
             alert("Try going lower");
+            
         } else {
             alert("A bit higher");
         }
