@@ -7,11 +7,11 @@
     background-color: rgb(166, 211, 219);
     min-height: 100vh;
     width: 100%;
-    display: flex;
+    display: flex; /*Simple easy method to center our form on the page */
     align-items: center;
     justify-content: center;
 }
-
+/*buttons and form styling */
 button, input{
     padding: 20px;
 }
@@ -25,9 +25,10 @@ button:hover{
     width: 450px;
 }
 
+
 .hints{
     margin: auto;
-    width: 0%;
+    width: 0%; /*hidden with a 0% width, animate with javascript function*/
     height: 75px;
     background-color: whitesmoke;
     display: flex;
@@ -46,8 +47,8 @@ button:hover{
     border: 1px solid black;
 }
 
-
-@keyframes hintsResize{
+/* going to use javascript to a toggle this on with a click */
+@keyframes hintsResize{ 
     from{width: 0%;}
     to{width: 100%;}
 }
